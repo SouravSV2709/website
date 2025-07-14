@@ -1,0 +1,924 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 82px;
+  padding: 6px 20px; /* Add some padding for spacing */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed; /* Keeps the header fixed at the top */
+  top: 0;
+  left: 0;
+  z-index: 9999; /* Ensure the header stays above other elements */
+  border: none; /* Remove border */
+}
+
+header nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.spacer {
+  height: 82px; /* Match the height of the header */
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at center, #f0e8ff 0%, #f5f1ff 30%, #e8ccff 55%, #d6a9ff 80%, #f0e8ff 100%);
+  background-size: cover;
+  animation: backgroundGlow 10s ease-in-out infinite alternate;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Fix the body to cover the viewport */
+  border: none; /* Remove border */
+}
+
+@keyframes backgroundGlow {
+  0% {
+    background-position: center;
+    filter: brightness(1);
+  }
+  100% {
+    background-position: center;
+    filter: brightness(1.05);
+  }
+}
+
+.hero {
+  font-family: Montserrat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 0; /* Remove negative margin */
+  padding-top: 0; /* Ensure no extra padding */
+  vertical-align: middle;
+  border: none; /* Remove border */
+}
+
+.hero-orbit-container {
+  position: relative; /* Position relative to allow absolute positioning of icons */
+  margin-top: 84px; /* Adjusted to match the header height */
+  margin: 0 auto; /* Center the container horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.circle-wrapper1 {
+  position: relative; /* Ensure icons are positioned relative to this container */;
+  height: 90vmin;
+  width: 90vmin;
+  border: 5px solid #FFFFFF;
+  border-radius: 50%; /* Makes the wrapper a perfect circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-wrapper2 {
+  position: relative;
+  height: 60vmin;
+  width: 60vmin;
+  margin: 0 auto;
+  border-color: #ccc;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 0%, #d1a2ff 100%, #a259ff 80%);
+  box-shadow: 0 0 60px 30px rgba(162, 89, 255, 0.5);
+  animation: glowPulse 3s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 40px 20px rgba(241, 89, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 80px 40px rgba(208, 89, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 40px 20px rgba(208, 89, 255, 0.4);
+  }
+}
+
+
+
+input::placeholder,
+textarea::placeholder {
+  text-align: left; /* Align placeholder text to the left */
+}
+
+.pricing-header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  width: 70%;
+  padding: 40px 20px;
+  margin: 0 auto; /* Center the header horizontally */
+
+}
+
+.push-btn {
+  width: 161;
+  height: 46;
+  top: 247px;
+  left: 638.5px;
+  border-radius: 16px;
+  border-width: 2px;
+  padding-top: 11px;
+  padding-right: 35px;
+  padding-bottom: 11px;
+  padding-left: 35px;
+  border: 2px solid #7326F1;
+}
+
+.push-btn:active{
+  background: #6203fc;
+  color: #FFFFFF;
+}
+
+.pricing p {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 159%;
+  letter-spacing: -3%;
+  text-align: center;
+  color: #571CB6;
+  width: 710;
+  height: 179;
+  top: 138px;
+  left: 283.5px;
+  
+}
+
+.options {
+  text-align: center;
+  padding: 40px 20px;
+  border: none; /* Remove border */
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 127%;
+  letter-spacing: -3%;
+  text-align: center;
+  color: #571CB6;
+  margin-top: 80px; /* Add some space above the title */
+
+}
+
+.services{
+  width: 100%;
+  max-width: 80vw;
+  margin: auto;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  border: #050505 solid 4px;
+  border-radius: 25px;
+  vertical-align: middle;*
+}
+
+.service-on-call{
+  align-items: center;
+  vertical-align: middle
+}
+
+.service-on-call h2 {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 2.5vw;
+  line-height: 149%;
+  letter-spacing: 2.5%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.service-on-call p {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 2.5vw;
+  line-height: 149%;
+  letter-spacing: 2.5%;
+  text-align: left;
+}
+
+
+.auction-cards {
+  max-width: 80vw;
+  text-align: center;
+  padding: 40px 20px;
+  border: none; /* Remove border */
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  margin: auto;
+
+}
+
+.auction-card {
+  align-items: center;
+  padding: 25px;
+  border: rgba(0, 0, 0, 0.1) solid 2px;
+  border-radius: 20px;
+  background: white;
+  position: relative;
+  height: 30rem;
+  width: 100%;
+  text-align: left;
+}
+
+
+.auction-card h2 {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 2.5%;
+  text-align: left;
+  line-height: 149%;
+  
+}
+
+.action-cards-image {
+  width: 99px; /* Set the desired width */
+  height: 83px; /* Set the desired height */
+  object-fit: fill; /* Crop the image to fit the container */
+  object-position: top; /* Adjust which part of the image is visible */
+  display: block; /* Ensure the image behaves like a block element */
+}
+
+.auction-card p {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 149%;
+  letter-spacing: 2.5%;
+  text-align: left;
+  margin-top: 25px;
+  padding-bottom: 50px;
+}
+
+.past-auctions {
+  gap: 20px;
+  padding: 40px 20px;
+  background-image: url('blue-background.jpg');
+  background-size: 100% 100%;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.past-auctions-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+  max-width: 80vw;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.pricing,
+.how-it-works {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.cards {
+  margin: auto ;
+  padding: 40px 20px;
+  max-width: 1200px;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between ;
+  flex-direction: row ;
+  gap: 80px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.form-section {
+  padding: 40px 20px;
+  align-items: center;
+  display: flex;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.form-section h2 {
+  vertical-align: top;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.form-group {
+  width: 50%; /* Ensure full width */
+  text-align: left; /* Align text to the left */
+}
+
+.name-inputs {
+  display: flex;
+  flex-direction: row; /* Align first name and last name side by side */
+  justify-content: space-between; /* Space them evenly */
+  width: 50%;
+  gap: 20px;
+}
+
+.checkbox-group {
+  display: inline;
+  gap: 10px; /* Add spacing between the checkbox and text */
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin: 0; /* Remove default margin */
+  width: 20px; /* Set a fixed width for the checkbox */
+  height: 20px; /* Set a fixed height for the checkbox */
+  vertical-align: middle; /* Align checkbox vertically with text */
+}
+
+.checkbox-group label {
+  font-size: 14px; /* Adjust font size */
+  color: #ffffff; /* Text color */
+  font-weight: 400; /* Adjust font weight */
+}
+
+.form-group label {
+  font-weight: 100;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: left; /* Align label text to the left */
+}
+
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+.form-section button {
+  background: #7540ee;
+  color: #fff;
+  border: none;
+  height: 80%;
+  width: 80%;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 10px 0;
+  width: 50%;
+  font-weight: 600;
+}
+
+
+.circle-content h1 {
+  font-weight: 700;
+  font-size: 5.5vmin;
+  margin-bottom: 3.5vmin;
+  letter-spacing: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.circle-content p {
+  font-size: 2.4vmin;
+  margin-bottom: 3.5vmin;
+  font-weight: 500;
+  text-align: center;
+}
+
+.circle-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.circle-content .cta-button {
+  width: 25vmin;
+  height: 7vmin;
+  border-radius: 10px;
+  background: #571CB6;
+  font-weight: 600;
+  line-height: 149%;
+  letter-spacing: 2.5%;
+  text-align: center;
+  color: #FFFFFF;
+  font-style: normal;
+  font-size: 2.4vmin;
+}
+
+.circle-content .explore-link {
+  display: inline-block;
+  font-size: 2.4vmin;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+.start-btn {
+  background: #7540ee;
+  color: white;
+  padding: 10px 22px;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.start-btn:hover {
+  background: #5e2dd6;
+}
+
+/* Orbiting Icons */
+.orbit-icon {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  animation: orbit 50s linear infinite;
+  border-radius: 50%;
+  background: transparent; 
+}
+
+.icon1 {
+  transform: rotate(0deg) translateX(425px); /* Start at 0° */
+  animation-delay: 0s; /* No delay for the first icon */
+  border-radius: 50%;
+}
+
+.icon2 {
+  transform: rotate(90deg) translateX(425px); /* Start at 90° */
+  animation-delay: -12.5s; /* Delay to ensure equal spacing (1/4th of 20s) */
+  border-radius: 50%;
+}
+
+.icon3 {
+  transform: rotate(180deg) translateX(425px); /* Start at 180° */
+  animation-delay: -25s; /* Delay to ensure equal spacing (2/4th of 20s) */
+  border-radius: 50%;
+  background: none;
+}
+
+.icon4 {
+  transform: rotate(270deg) translateX(425px); /* Start at 270° */
+  animation-delay: -37.5s; /* Delay to ensure equal spacing (3/4th of 20s) */
+  border-radius: 50%;
+}
+
+.icon-border {
+  border: 4px solid #480fda; /* Add a border to the icons */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+  width: 50%;
+  margin-right: 100%;
+  height: fit-content;
+  width: fit-content;
+}
+
+.icon-border .material-icons {
+  font-size: 4vw; /* Adjust icon size */
+  color: #000; /* Change icon color */
+}
+
+.icon-border p {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 1.5vw; /* Adjust text size */
+  color: #333; /* Text color */
+}
+
+.status .material-icons {
+  font-size: 24px; /* Adjust icon size */
+  margin: auto;
+}
+
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(45vmin) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(45vmin) rotate(-360deg);
+  }
+}
+
+
+/* Process Section */
+.process-section {
+  text-align: center;
+  padding: 40px 20px;
+  border: none; /* Remove border */
+}
+
+.process-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80vw;
+  margin: 0 auto;
+  gap: 15vw;
+  border: none; /* Remove border */
+  background: none;
+  position: relative;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.step .step-icon {
+  font-size: 4vw; /* Adjust size */
+}
+
+.material-icons {
+  font-size: 24px; /* Adjust size */
+  color: #7540ee; /* Adjust color */
+}
+
+.step-label {
+  font-size: 1vw; /* Adjust size */
+  font-weight: 600;
+  color: #333;
+}
+
+.process-description {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.step::after {
+  content: ""; /* Create a pseudo-element for the line */
+  position: absolute;
+  top: 50%; /* Align the line vertically */
+  left:150% ; /* Position the line to the right of the icon */
+  width: 11vw; /* Length of the dotted line */
+  height: 2px; /* Thickness of the line */
+  border-top: 2px dotted #7540ee; /* Dotted line style */
+  transform: translateY(-50%);
+}
+
+.step:last-child::after {
+  content: none; /* Remove the line after the last icon */
+  z-index: 1; /* Ensure the line is above other elements */
+}
+
+.platform-badge {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #e0ffe0;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #008000;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden; /* Hide overflowing items */
+  max-width: 80vw;
+  margin: auto;
+  text-align: center;
+  padding: 20px 20px;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+  justify-content: flex-start; /* Center the items */
+}
+
+.past-auction {
+  flex: 0 0 50%; /* Each item takes 50% of the container width */
+  text-align: center;
+  align-items: center;
+  max-width: 80vw;
+  padding: auto;
+  position: relative;
+  margin: auto;
+}
+
+.past-auctions-content {
+  border: rgba(0, 0, 0, 0.1) solid 2px;
+  border-radius: 20px;
+  background: white;
+  height: 100%;
+  width: 80%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  padding: auto;
+
+}
+
+.past-auctions-container h2 {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: 2.5%;
+  text-align: left;
+  max-width: fit-content;
+  align-items: start;
+  padding: auto;
+  line-height: 200%;
+  color: #ffffff;
+  text-transform: uppercase;
+   margin: 0;
+   padding: 0;
+}
+
+.status {
+  flex: 0 0 50%; /* Each item takes 50% of the container width */
+  text-align: center;
+  align-items: center;
+  border: rgba(0, 0, 0, 0.2) solid 2px;
+  border-radius: 20rem;
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  vertical-align: middle;
+  margin-bottom: 25px;
+}
+
+.option-header {
+  flex: 0 0 50%; /* Each item takes 50% of the container width */
+  text-align: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  vertical-align: middle;
+  text-align: center;
+  height: 20px;
+  width: 100%;
+}
+
+.option-header h2 {
+  color: #571CB6;
+}
+
+.option-header icon {
+  font-size: 50px; /* Adjust icon size */
+  color: #571CB6; /* Adjust icon color */
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.options p {
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 149%;
+  letter-spacing: -3%;
+  text-align: center;
+  margin: 0; /* Remove default margin */
+}
+
+.past-auction img {
+  flex: 0 0 50%; /* Each item takes 50% of the container width */
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  border-radius: 45px;
+  position: relative;
+  height: 60%;
+  width: 80%;
+  margin: auto;
+  padding: auto;
+}
+
+.past-auction div a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  width: 80%;
+  font-size: larger;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #f3f2f5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background: #5e2dd6;
+}
+
+.footer {
+  background-image: url('blue-background.jpg');
+  background-size: 100% 100%;
+}
+
+.footer-section {
+  margin: auto; /* Center the footer */
+  text-align: center; /* Center the text */
+}
+
+.footer-container {
+  background: #f3f2f5; /* Light background color */
+  color: #333; /* Text color */
+  padding: 40px 20px;
+  border-radius: 16px; /* Rounded corners */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between sections */
+  align-items: flex-start; /* Align items at the top */
+  max-width: 1200px;
+  margin: auto; /* Center the footer content */
+  gap: 80px; /* Add spacing between sections */
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: row; /* Stack items vertically */
+  gap: 20px; /* Add spacing between items */
+}
+
+
+.footer-logo {
+  width: 100px; /* Adjust logo size */
+  margin-bottom: 20px; /* Add spacing below the logo */
+}
+
+.footer-left ul,
+.footer-center ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+}
+
+.footer-left ul li,
+.footer-center ul li {
+  margin-bottom: 10px; /* Add spacing between list items */
+  text-align: left;
+}
+
+.footer-left ul li a,
+.footer-center ul li a {
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Text color */
+  font-weight: 500; /* Slightly bold text */
+}
+
+.footer-right h3 {
+  font-size: 18px; /* Adjust heading size */
+  margin-bottom: 10px; /* Add spacing below heading */
+}
+
+.footer-right p {
+  font-size: 14px; /* Adjust text size */
+  margin: 5px 0; /* Add spacing between paragraphs */
+}
+
+.footer-right a {
+  color: #7540ee; /* Highlight email link */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer-bottom {
+  margin: auto; /* Add spacing above the bottom text */
+  font-size: 14px; /* Adjust text size */
+  color: #ffffff  ; /* Text color */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Stack header items vertically */
+    height: auto; /* Adjust height */
+    padding: 10px; /* Add padding for spacing */
+  }
+
+  .form-section {
+    flex-direction: column; /* Stack form elements vertically */
+    padding: 20px; /* Reduce padding */
+  }
+
+  .form-group {
+    width: 100%; /* Make form inputs span the full width */
+  }
+
+  .name-inputs {
+    flex-direction: column; /* Stack first name and last name vertically */
+    gap: 10px; /* Reduce spacing */
+  }
+
+  .footer-container {
+    flex-direction: column; /* Stack footer sections vertically */
+    gap: 20px; /* Reduce spacing */
+    text-align: center; /* Center footer content */
+  }
+
+  .footer-left ul,
+  .footer-center ul {
+    text-align: center; /* Center list items */
+  }
+
+  .footer-logo {
+    margin: auto; /* Center the logo */
+  }
+
+  .cards {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px; /* Reduce spacing */
+  }
+
+  .options {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px; /* Reduce spacing */
+  }
+
+  .auction-cards {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px; /* Reduce spacing */
+  }
+
+  .past-auction {
+  flex: 0 0 100%; /* Each item takes 50% of the container width */
+  }
+}

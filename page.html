@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auction Master</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes orbit {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+  <style>
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent }
+  }
+
+  .animate-typing {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0; /* Remove or set to none */
+    width: 0;
+    animation: typing 5s steps(60, end) forwards infinite;
+  }
+</style>
+
+</head>
+
+<body class="bg-gradient-to-br from-[#e6d0f8] to-[#d4b1ff] text-[#333] font-['Inter'] overflow-x-hidden">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm border-b border-violet-100">
+    <div class="max-w-7xl mx-auto px-4 py-3">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div class="flex items-center gap-2">
+          <img src="logo.png" alt="Auction Arena Logo" class="h-8 w-auto" />
+          <span class="text-lg sm:text-xl font-bold text-[#4a148c]">Auction Arena</span>
+        </div>
+        <div class="flex items-center gap-1 text-sm text-[#4a148c]">
+          <span class="material-icons text-base">call</span>
+          <span>Support: +91-9547652702</span>
+          <span class="sm:inline text-xs text-gray-600">[Sourav]</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Divider -->
+  <div class="h-24 bg-[radial-gradient(circle,_#e2c4ff_0%,_transparent_70%)] -mt-10 relative z-0"></div>
+
+  <!-- Hero Section -->
+  <section class="py-16 bg-gradient-to-br from-[#f8f3ff] to-[#ece1ff] text-center rounded-b-[40px] rounded-t-[40px] shadow-inner">
+
+<!-- Additional Left floating texts -->
+<div class="absolute left-[20%] top-[20%] transform -translate-y-1/2 hidden md:block">
+  <div class="bg-white/30 backdrop-blur px-4 py-2 rounded-lg shadow text-sm font-semibold text-[#4a148c] animate-bounce">
+    🔍 Transparent Bidding History
+  </div>
+</div>
+<div class="absolute left-[10%] top-[40%] transform -translate-y-1/2 hidden md:block">
+  <div class="bg-white/30 backdrop-blur px-4 py-2 rounded-lg shadow text-sm font-semibold text-[#4a148c] animate-bounce">
+    📝 Seamless Player Registration
+  </div>
+</div>
+<div class="absolute left-0 top-[60%] transform -translate-y-1/2 hidden md:block">
+  <div class="bg-white/30 backdrop-blur px-4 py-2 rounded-lg shadow text-sm font-semibold text-[#4a148c] animate-bounce">
+    📄 Seamless Report Generation
+  </div>
+</div>
+
+
+<!-- Additional Right floating texts -->
+<div class="absolute right-[20%] top-[20%] transform -translate-y-1/2 hidden md:block">
+  <div class="bg-white/30 backdrop-blur px-4 py-2 rounded-lg shadow text-sm font-semibold text-[#4a148c] animate-bounce">
+    🧑‍💼 Admin-Controlled Auction Panel
+  </div>
+</div>
+<div class="absolute right-[10%] top-[40%] transform -translate-y-1/2 hidden md:block">
+  <div class="bg-white/30 backdrop-blur px-4 py-2 rounded-lg shadow text-sm font-semibold text-[#4a148c] animate-bounce">
+    📺 Live TV Display
+  </div>
+</div>
+<div class="absolute right-0 top-[60%] transform -translate-y-1/2 hidden md:block">
+  <div class="bg-white/30 backdrop-blur px-4 py-2 rounded-lg shadow text-sm font-semibold text-[#4a148c] animate-bounce">
+    🎥 Streaming Live Overlay
+  </div>
+</div>
+
+    <div class="max-w-xl mx-auto mt-2 px-4">
+      <h1 class="text-4xl font-bold mb-2 animate-typing">Unite. Bid. Conquer.</h1>
+      <p>Empowering tournaments with seamless bidding and real-time engagement.</p>
+      <p class="font-semibold">Unlocking potential, one bid at a time.</p>
+    </div>
+    <div class="relative w-[300px] h-[300px] mx-auto mt-10 flex items-center justify-center">
+      <!-- Glowing Orbit Ring -->
+      <div
+        class="absolute w-full h-full rounded-full border-2 border-violet-300 animate-pulse shadow-[0_0_40px_10px_rgba(108,99,255,0.4)]">
+      </div>
+
+      <!-- Orbit Icons -->
+      <div class="absolute">
+        <div class="absolute top-1/2 left-1/2 w-10 h-10 animate-[orbit_12s_linear_infinite] z-10"
+          style="transform-origin: center center; animation-delay: 0s;">
+          <div class="transform translate-y-[-150px]">
+            <img src="cricket.jpg" class="rounded-full opacity-85 w-full h-full object-cover" />
+          </div>
+        </div>
+        <div class="absolute top-1/2 left-1/2 w-10 h-10 animate-[orbit_12s_linear_infinite] z-10"
+          style="transform-origin: center center; animation-delay: 3s;">
+          <div class="transform translate-y-[-150px]">
+            <img src="hammer.jpg" class="rounded-full opacity-85 w-full h-full object-cover" />
+          </div>
+        </div>
+        <div class="absolute top-1/2 left-1/2 w-10 h-10 animate-[orbit_12s_linear_infinite] z-10"
+          style="transform-origin: center center; animation-delay: 6s;">
+          <div class="transform translate-y-[-150px]">
+            <img src="football.png" class="rounded-full opacity-85 w-full h-full object-cover" />
+          </div>
+        </div>
+        <div class="absolute top-1/2 left-1/2 w-10 h-10 animate-[orbit_12s_linear_infinite] z-10"
+          style="transform-origin: center center; animation-delay: 9s;">
+          <div class="transform translate-y-[-150px]">
+            <img src="football2.png" class="rounded-full opacity-85 w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+      <!-- Center Content -->
+      <div class="absolute z-20 text-center">
+        <a href="#" class="bg-[#6c63ff] text-white px-6 py-3 rounded-lg font-semibold block mb-2">Start Your Auction</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Divider -->
+  <div class="h-24 bg-[radial-gradient(circle,_#e2c4ff_0%,_transparent_70%)] -mt-10 relative z-0"></div>
+
+  <!-- Process Overview Section -->
+  <section id="process" class="py-16 bg-gradient-to-br from-[#f8f3ff] to-[#ece1ff] text-center">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-[#4a148c] mb-6">Auction Process Overview</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 relative">
+        <div class="flex flex-col items-center">
+          <span class="material-icons text-5xl text-[#6c63ff] mb-2">event</span>
+          <h3 class="font-semibold text-base">Create<br>Auction</h3>
+        </div>
+        <div
+          class="hidden md:block absolute top-6 left-[20%] w-[15%] h-[1px] border-t-2 border-dotted border-[#6c63ff]">
+        </div>
+
+        <div class="flex flex-col items-center">
+          <span class="material-icons text-5xl text-[#6c63ff] mb-2">groups</span>
+          <h3 class="font-semibold text-base">Register<br>Teams</h3>
+        </div>
+        <div
+          class="hidden md:block absolute top-6 left-[40%] w-[15%] h-[1px] border-t-2 border-dotted border-[#6c63ff]">
+        </div>
+
+        <div class="flex flex-col items-center">
+          <span class="material-icons text-5xl text-[#6c63ff] mb-2">person_add</span>
+          <h3 class="font-semibold text-base">Register<br>Players</h3>
+        </div>
+        <div
+          class="hidden md:block absolute top-6 left-[60%] w-[15%] h-[1px] border-t-2 border-dotted border-[#6c63ff]">
+        </div>
+
+        <div class="flex flex-col items-center">
+          <span class="material-icons text-5xl text-[#6c63ff] mb-2">live_tv</span>
+          <h3 class="font-semibold text-base">Live<br>Auction</h3>
+        </div>
+        <div
+          class="hidden md:block absolute top-6 left-[80%] w-[15%] h-[1px] border-t-2 border-dotted border-[#6c63ff]">
+        </div>
+
+        <div class="flex flex-col items-center">
+          <span class="material-icons text-5xl text-[#6c63ff] mb-2">emoji_events</span>
+          <h3 class="font-semibold text-base">Tournament</h3>
+        </div>
+      </div>
+      <p class="mt-10 text-gray-700">From Player Registration to Live Auctions and Tournament Reports</p>
+      <div class="mt-4 inline-block bg-green-100 text-green-700 font-semibold px-4 py-2 rounded-full shadow text-sm">
+        ✅ All in One Platform
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="h-24 bg-[radial-gradient(circle,_#e2c4ff_0%,_transparent_70%)] -mt-10 relative z-0"></div>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-[#f8f4ff] text-center rounded-b-[40px] rounded-t-[40px]">
+    <h2 class="text-3xl font-bold text-[#5b2a8c] mb-10">Services We Provide</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
+      <div class="bg-white rounded-xl shadow p-6">
+        <h3 class="text-xl font-semibold mb-2">Custom Auction Setup</h3>
+        <p>Tailored configurations for various sports and formats.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6">
+        <h3 class="text-xl font-semibold mb-2">Live Bidding Interface</h3>
+        <p>Real-time bidding with spectator view and admin control.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6">
+        <h3 class="text-xl font-semibold mb-2">Pre and Post-Auction Reports</h3>
+        <p>Auto-generated teams, summaries, and print-ready outputs.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6">
+        <h3 class="text-xl font-semibold mb-2">Theme Customization</h3>
+        <p>Match your branding with vibrant display themes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="h-24 bg-[radial-gradient(circle,_#e2c4ff_0%,_transparent_70%)] -mt-10 relative z-0"></div>
+
+  <!-- Auction Features -->
+  <section
+    class="py-16 bg-gradient-to-br from-[#f8f3ff] to-[#ece1ff] text-center rounded-b-[40px] rounded-t-[40px] shadow-inner">
+    <h2 class="text-3xl font-bold text-[#4a148c] mb-10">Auction Features</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+        <img src="action-cards1.png" class="w-20 mb-4" />
+        <h3 class="text-lg font-semibold mb-2">Player Registration + Payments</h3>
+        <p class="text-sm">Register and settle payments automatically.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+        <img src="action-cards2.png" class="w-20 mb-4" />
+        <h3 class="text-lg font-semibold mb-2">Pre-Auction Insights</h3>
+        <p class="text-sm">Analytics and reports before bidding starts.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+        <img src="action-cards3.png" class="w-20 mb-4" />
+        <h3 class="text-lg font-semibold mb-2">Live Auction Dashboard</h3>
+        <p class="text-sm">Interactive, data-rich dashboard for auction.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+        <img src="action-cards4.png" class="w-20 mb-4" />
+        <h3 class="text-lg font-semibold mb-2">Post-Auction Reports</h3>
+        <p class="text-sm">View final teams, spending, and strategy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="h-24 bg-[radial-gradient(circle,_#e2c4ff_0%,_transparent_70%)] -mt-10 relative z-0"></div>
+
+  <!-- Pricing Section -->
+  <section id="pricing"
+    class="py-16 bg-gradient-to-br from-[#ede2ff] to-[#dac9ff] text-center rounded-b-[40px] rounded-t-[40px] shadow-inner">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-4">Master the Auction Game – Anytime, Anywhere.</h2>
+      <p class="text-sm max-w-2xl mx-auto mb-8 text-[#444]">End-to-end auction solutions for unmatched tournament
+        control and efficiency.</p>
+      <!-- <div class="space-x-4 mb-10">
+        <button class="bg-[#6c63ff] text-white px-6 py-2 rounded-md font-semibold">Get Started</button>
+        <button class="bg-[#6c63ff] text-white px-6 py-2 rounded-md font-semibold">Talk to Sales</button>
+      </div> -->
+      <h3 class="text-2xl font-bold mb-6">Simple, Transparent Pricing</h3>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="bg-white rounded-xl shadow p-6 max-w-xs">
+          <h4 class="text-lg font-semibold mb-2">Complete Package</h4>
+          <p class="text-2xl text-[#6c63ff] font-bold">₹7000</p>
+          <p class="text-sm">All Modules Included</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-6 max-w-xs">
+          <h4 class="text-lg font-semibold mb-2">Registration Only</h4>
+          <p class="text-2xl text-[#6c63ff] font-bold">₹3000</p>
+          <p class="text-sm">Player Registration</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-6 max-w-xs">
+          <h4 class="text-lg font-semibold mb-2">Auction Only</h4>
+          <p class="text-2xl text-[#6c63ff] font-bold">₹5000</p>
+          <p class="text-sm">Auction Management</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="h-24 bg-[radial-gradient(circle,_#e2c4ff_0%,_transparent_70%)] -mt-10 relative z-0"></div>
+
+  <!-- Footer -->
+  <footer
+    class="mt-16 bg-gradient-to-br from-[#e9d2ff] to-[#dbc7ff] text-center py-8 px-4 text-sm text-gray-700 shadow-inner">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-2 font-semibold">Auction Arena © 2025</div>
+      <p>Empowering your tournaments with cutting-edge auction solutions.</p>
+      <div class="mt-4 grid grid-cols-2 sm:flex justify-center gap-2 sm:gap-4 text-sm text-[#6c63ff] text-center">
+        <a href="#services" class="hover:underline">Services</a>
+        <a href="#pricing" class="hover:underline">Pricing</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+        <a href="terms.html" target="_blank" rel="noopener noreferrer" class="hover:underline">Terms & Conditions</a>
+        <a href="privacy.html" target="_blank" rel="noopener noreferrer" class="hover:underline">Privacy Policy</a>
+        <a href="about.html" target="_blank" rel="noopener noreferrer" class="hover:underline">About Us</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
