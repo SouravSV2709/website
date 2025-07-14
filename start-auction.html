@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start Your Auction</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-purple-100 to-violet-200 min-h-screen flex items-center justify-center p-4">
+  <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
+    <h1 class="text-2xl font-bold text-[#4a148c] mb-6 text-center">Start Your Auction</h1>
+
+    <form action="https://formsubmit.co/auctionarena360@gmail.com" method="POST" enctype="multipart/form-data">
+      <input type="text" name="name" placeholder="Your Name" class="w-full mb-3 p-3 border rounded" required />
+      <input type="email" name="email" placeholder="Your Email" class="w-full mb-3 p-3 border rounded" required />
+      <input type="text" name="phone" placeholder="Phone Number" class="w-full mb-3 p-3 border rounded" required />
+      <textarea name="message" placeholder="Tell us about your tournament..."
+        class="w-full mb-4 p-3 border rounded" rows="4" required></textarea>
+
+      <label class="block text-sm font-medium mb-1 text-[#4a148c]">Upload Image</label>
+      <input type="file" name="attachment" accept="image/*" class="w-full mb-4" required />
+
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_subject" value="New Auction Form Submission" />
+      <input type="hidden" name="_template" value="box" />
+      <input type="hidden" name="_next" value="https://www.auctionarena.live/thank-you.html" />
+
+      <button type="submit"
+        class="w-full bg-[#6c63ff] text-white font-semibold py-3 rounded-lg hover:bg-[#5b52e0] transition">
+        Submit
+      </button>
+    </form>
+
+    <div id="formResponse" class="text-center mt-4 text-sm text-green-700 font-medium hidden">
+      Form submitted successfully!
+    </div>
+  </div>
+</body>
+
+</html>
