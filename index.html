@@ -9,35 +9,42 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    @keyframes orbit {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
+   @keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(140px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(140px) rotate(-360deg);
+  }
+}
   </style>
 
   <style>
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
+    @keyframes typing {
+      from {
+        width: 0
+      }
 
-  @keyframes blink {
-    50% { border-color: transparent }
-  }
+      to {
+        width: 100%
+      }
+    }
 
-  .animate-typing {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 0; /* Remove or set to none */
-    width: 0;
-    animation: typing 5s steps(60, end) forwards infinite;
-  }
-</style>
+    @keyframes blink {
+      50% {
+        border-color: transparent
+      }
+    }
+
+    .animate-typing {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 0;
+      /* Remove or set to none */
+      width: 0;
+      animation: typing 5s steps(60, end) forwards infinite;
+    }
+  </style>
 
 </head>
 
@@ -114,34 +121,34 @@
 
       <!-- Orbit Icons -->
       <div class="absolute">
-        <div class="absolute top-1/2 left-1/2 w-10 h-10 animate-[orbit_12s_linear_infinite] z-10"
+        <div class="absolute top-1/2 left-1/2 w-10 h-10 -translate-x-1/2 -translate-y-1/2 animate-[orbit_12s_linear_infinite] z-10 -mt-5 -ml-5"
           style="transform-origin: center center; animation-delay: 0s;">
-          <div class="transform translate-y-[-150px]">
-            <img src="football.png" class="rounded-full opacity-85 w-full h-full object-cover mb-10" />
+          <div class="transform translate-y-[-0px]">
+            <img src="football.png" class="rounded-full opacity-85 w-full h-full object-cover" />
           </div>
         </div>
-        <div class="absolute top-1/2 left-1/2 w-10 h-10 animate-[orbit_12s_linear_infinite] z-10"
-          style="transform-origin: center center; animation-delay: 3s;">
-          <div class="transform translate-y-[-150px]">
+        <div class="absolute top-1/2 left-1/2 w-10 h-10 -translate-x-1/2 -translate-y-1/2 animate-[orbit_12s_linear_infinite] z-10 -mt-5 -ml-5"
+          style="transform-origin: center center; animation-delay: -3s;">
+          <div class="transform translate-y-[-0px]">
             <img src="cricket.jpg" class="rounded-full opacity-85 w-full h-full object-cover" />
           </div>
         </div>
-        <div class="absolute top-1/2 left-1/2 w-10 h-10 animate-[orbit_12s_linear_infinite] z-10"
-          style="transform-origin: center center; animation-delay: 6s;">
-          <div class="transform translate-y-[-150px]">
+        <div class="absolute top-1/2 left-1/2 w-10 h-10 -translate-x-1/2 -translate-y-1/2 animate-[orbit_12s_linear_infinite] z-10 -mt-5 -ml-5"
+          style="transform-origin: center center; animation-delay: -6s;">
+          <div class="transform translate-y-[-0px]">
             <img src="football2.png" class="rounded-full opacity-85 w-full h-full object-cover" />
           </div>
         </div>
-        <div class="absolute top-1/2 left-1/2 w-10 h-10 animate-[orbit_12s_linear_infinite] z-10"
-          style="transform-origin: center center; animation-delay: 9s;">
-          <div class="transform translate-y-[-150px]">
+        <div class="absolute top-1/2 left-1/2 w-10 h-10 -translate-x-1/2 -translate-y-1/2 animate-[orbit_12s_linear_infinite] z-10 -mt-5 -ml-5"
+          style="transform-origin: center center; animation-delay: -9s;">
+          <div class="transform translate-y-[-0px]">
             <img src="hammer.jpg" class="rounded-full opacity-85 w-full h-full object-cover" />
           </div>
         </div>
       </div>
       <!-- Center Content -->
       <div class="absolute z-20 text-center">
-      <a href="submit-query.html" class="bg-[#6c63ff] text-white px-6 py- rounded-lg font-semibold block mb-2">Start Your Auction</a>
+      <a href="#" id="openModalBtn" class="bg-[#6c63ff] text-white px-6 py- rounded-lg font-semibold block mb-2">Start Your Auction</a>
       </div>
     </div>
 
@@ -311,6 +318,51 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal Overlay and Content -->
+  <div id="submitQueryModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md relative">
+      <button id="closeModalBtn"
+        class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+      <h1 class="text-2xl font-bold text-[#4a148c] mb-6 text-center">Submit Basic Details</h1>
+      <form action="https://formsubmit.co/auctionarena360@gmail.com" method="POST" enctype="multipart/form-data">
+        <input type="text" name="tournament-name" placeholder="Tournament Name" class="w-full mb-3 p-3 border rounded"
+          required />
+        <input type="text" name="name" placeholder="Your Name" class="w-full mb-3 p-3 border rounded" required />
+        <input type="email" name="email" placeholder="Your Email" class="w-full mb-3 p-3 border rounded" />
+        <input type="text" name="phone" placeholder="Phone Number" class="w-full mb-3 p-3 border rounded" required />
+        <textarea name="message"
+          placeholder="Tell us about your tournament (like Place of occurance, tournament Date, Auction date etc)"
+          class="w-full mb-4 p-3 border rounded" rows="4" required></textarea>
+        <label class="block text-sm font-medium mb-1 text-[#4a148c]">Upload Tournament Logo</label>
+        <input type="file" name="attachment" accept="image/*" class="w-full mb-4" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_subject" value="New Auction Form Submission" />
+        <input type="hidden" name="_template" value="box" />
+        <input type="hidden" name="_next" value="https://www.auctionarena.live/thank-you.html" />
+        <button type="submit"
+          class="w-full bg-[#6c63ff] text-white font-semibold py-3 rounded-lg hover:bg-[#5b52e0] transition">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Open modal
+    document.getElementById('openModalBtn').onclick = function (e) {
+      e.preventDefault();
+      document.getElementById('submitQueryModal').classList.remove('hidden');
+    };
+    // Close modal
+    document.getElementById('closeModalBtn').onclick = function () {
+      document.getElementById('submitQueryModal').classList.add('hidden');
+    };
+    // Optional: Close modal when clicking outside the form
+    document.getElementById('submitQueryModal').onclick = function (e) {
+      if (e.target === this) this.classList.add('hidden');
+    };
+  </script>
 </body>
 
 </html>
