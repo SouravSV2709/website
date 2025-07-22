@@ -157,46 +157,149 @@
   <!-- Divider -->
   <div class="h-24 bg-[radial-gradient(circle,_#e2c4ff_0%,_transparent_70%)] -mt-10 relative z-0"></div>
 
-  <!-- Process Overview Section -->
+    <!-- Process Overview Section -->
   <section id="process" class="py-16 bg-gradient-to-br from-[#f8f3ff] to-[#ece1ff] text-center">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-3xl font-bold text-[#4a148c] mb-6">Auction Process Overview</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 relative">
+      <!-- Mobile layout: 2, 2, 1 grid with connecting lines -->
+      <div class="relative md:hidden">
+        <div class="grid grid-cols-2 gap-4 mb-8 z-10 relative">
+          <div id="step1" class="flex flex-col items-center opacity-0 scale-90 transition-all duration-500 ">
+            <h3 class="font-semibold text-base text-[#4a148c]">Step 1</h3>
+            <span class="material-icons text-5xl text-[#6c63ff]">event</span>
+            <p>Create Auction</p>
+          </div>
+          <div id="step2" class="flex flex-col items-center opacity-0 scale-90 transition-all duration-500">
+            <h3 class="font-semibold text-base text-[#4a148c]">Step 2</h3>
+            <span class="material-icons text-5xl text-[#6c63ff]">person_add</span>
+            <p>Register Players</p>
+          </div>
+            <div id="step3" class="flex flex-col items-center opacity-0 scale-90 transition-all duration-500">
+            <h3 class="font-semibold text-base text-[#4a148c]">Step 3</h3>
+            <span class="material-icons text-5xl text-[#6c63ff]">groups</span>
+            <p>Register Teams</p>
+          </div>
+          <div id="step4" class="flex flex-col items-center opacity-0 scale-90 transition-all duration-500">
+            <h3 class="font-semibold text-base text-[#4a148c]">Step 4</h3>
+            <span class="material-icons text-5xl text-[#6c63ff]">live_tv</span>
+            <p>Live Auction</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 gap-4 z-10 relative">
+          <div id="step5" class="flex flex-col items-center opacity-0 scale-90 transition-all duration-500">
+            <h3 class="font-semibold text-base text-[#4a148c]">Step 5</h3>
+            <span class="material-icons text-5xl text-[#6c63ff]">emoji_events</span>
+            <p>Tournament</p>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        .line-animate {
+          /* Do NOT set stroke-dasharray here! */
+          stroke-dashoffset: 200; /* Adjust this value to be longer than your line length */
+          animation: draw-line 15s linear forwards;
+        }
+        @keyframes draw-line {
+          to {
+            stroke-dashoffset: 0;
+          }
+        }
+      </style>
+
+      <script>
+      function animateProcessSteps() {
+        if (window.__processAnimated) return; // Prevent running twice
+        window.__processAnimated = true;
+        const steps = [
+          {el: "#step1", line: "#line1"},
+          {el: "#step2", line: "#line2"},
+          {el: "#step3", line: "#line3"},
+          {el: "#step4", line: "#line4"},
+          {el: "#step5", line: null}
+        ];
+        let delay = 0;
+        steps.forEach((step, i) => {
+          setTimeout(() => {
+            const el = document.querySelector(step.el);
+            if (el) {
+              el.classList.remove("opacity-0", "scale-90");
+              el.classList.add("opacity-100", "scale-100", "glow-animate");
+            }
+            if (step.line) {
+              setTimeout(() => {
+                const line = document.querySelector(step.line);
+                if (line) {
+                  line.style.opacity = 1;
+                  line.classList.add("line-animate");
+                }
+              }, 350);
+            }
+          }, delay);
+          delay += 1200;
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", function() {
+        const processSection = document.getElementById("process");
+        if (!processSection) return;
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                animateProcessSteps();
+                observer.disconnect();
+              }
+            });
+          },
+          { threshold: 0.3 }
+        );
+        observer.observe(processSection);
+      });
+      </script>
+      <!-- Desktop layout: keep your existing grid -->
+      <div class="hidden md:grid grid-cols-5 gap-6 relative items-center">
         <div class="flex flex-col items-center">
           <span class="material-icons text-5xl text-[#6c63ff] mb-2">event</span>
           <h3 class="font-semibold text-base">Create<br>Auction</h3>
         </div>
-        <div
-          class="hidden md:block absolute top-6 left-[20%] w-[15%] h-[1px] border-t-2 border-dotted border-[#6c63ff]">
-        </div>
-
         <div class="flex flex-col items-center">
           <span class="material-icons text-5xl text-[#6c63ff] mb-2">groups</span>
           <h3 class="font-semibold text-base">Register<br>Teams</h3>
         </div>
-        <div
-          class="hidden md:block absolute top-6 left-[40%] w-[15%] h-[1px] border-t-2 border-dotted border-[#6c63ff]">
-        </div>
-
         <div class="flex flex-col items-center">
           <span class="material-icons text-5xl text-[#6c63ff] mb-2">person_add</span>
           <h3 class="font-semibold text-base">Register<br>Players</h3>
         </div>
-        <div
-          class="hidden md:block absolute top-6 left-[60%] w-[15%] h-[1px] border-t-2 border-dotted border-[#6c63ff]">
-        </div>
-
         <div class="flex flex-col items-center">
           <span class="material-icons text-5xl text-[#6c63ff] mb-2">live_tv</span>
           <h3 class="font-semibold text-base">Live<br>Auction</h3>
         </div>
-        <div
-          class="hidden md:block absolute top-6 left-[80%] w-[15%] h-[1px] border-t-2 border-dotted border-[#6c63ff]">
-        </div>
-
         <div class="flex flex-col items-center">
           <span class="material-icons text-5xl text-[#6c63ff] mb-2">emoji_events</span>
           <h3 class="font-semibold text-base">Tournament</h3>
+        </div>
+        <!-- Connecting line (optional, SVG or div) -->
+          <!-- Short lines between icons -->
+        <div class="absolute top-1/2 left-[12%] w-[12%] h-1 border-t-2 border-dotted border-[#6c63ff] opacity-80 z-0">
+          <svg class="absolute right-0 -top-2" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <polygon points="4,2 14,7 4,12" fill="#6c63ff" fill-opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="absolute top-1/2 left-[33%] w-[12%] h-1 border-t-2 border-dotted border-[#6c63ff] opacity-80 z-0">
+          <svg class="absolute right-0 -top-2" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <polygon points="4,2 14,7 4,12" fill="#6c63ff" fill-opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="absolute top-1/2 left-[54%] w-[12%] h-1 border-t-2 border-dotted border-[#6c63ff] opacity-80 z-0">
+          <svg class="absolute right-0 -top-2" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <polygon points="4,2 14,7 4,12" fill="#6c63ff" fill-opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="absolute top-1/2 left-[75%] w-[12%] h-1 border-t-2 border-dotted border-[#6c63ff] opacity-80 z-0">
+          <svg class="absolute right-0 -top-2" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <polygon points="4,2 14,7 4,12" fill="#6c63ff" fill-opacity="0.8"/>
+          </svg>
         </div>
       </div>
       <p class="mt-10 text-gray-700">From Player Registration to Live Auctions and Tournament Reports</p>
